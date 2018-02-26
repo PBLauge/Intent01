@@ -17,7 +17,6 @@ public class MainActivity extends Activity {
 
     TextView txtHeader;
     EditText txtBox;
-    Button btnOK;
     Button btnNext;
 
     @Override
@@ -27,14 +26,7 @@ public class MainActivity extends Activity {
 
         txtHeader = (TextView)findViewById(R.id.header);
         txtBox = (EditText)findViewById(R.id.EditText01);
-        btnOK = (Button)findViewById(R.id.btnOK);
         btnNext = (Button)findViewById(R.id.btnNext);
-
-        btnOK.setOnClickListener( new View.OnClickListener() {
-            public void onClick(View v) {
-                MainActivity.this.onClickOK();
-            }
-        });
 
         btnNext.setOnClickListener(new View.OnClickListener() {
 
@@ -46,14 +38,6 @@ public class MainActivity extends Activity {
     }
 
 
-    public void onClickOK()
-    {
-        txtHeader.setText("Hi " + txtBox.getText() + "... Have a nice day!");
-        //btnOK.setClickable(false);
-
-        Log.d(LOG_TAG, "OK button clicked");
-
-    }
 
     public void onClickNext()
     {
@@ -62,10 +46,10 @@ public class MainActivity extends Activity {
         intent.setClass(this, SecondActivity.class);
         intent.putExtra("Person", p);
 
-        Log.d(LOG_TAG, "Next button clicked!");
         startActivity(intent);
+
         Log.d(LOG_TAG, "Second Activity started!");
-        //<editor-fold desc="Delay the invoker...">
+        //<editor-fold desc="Delay the launcher...">
         /*
         for (int i=0; i < 10; i++)
         {
@@ -79,10 +63,6 @@ public class MainActivity extends Activity {
         */
         //</editor-fold>
 
-
-        txtHeader.setText("Next is clicked...;-)");
         Log.d(LOG_TAG, "onClickNext finished");
-
-
     }
 }

@@ -24,15 +24,15 @@ public class SecondActivity extends Activity {
             p = new BEPerson("NO NAME", "NO PHONE", 0);
         }
 
-        Log.d(MainActivity.LOG_TAG, "Headertext=" + p.getName());
-        TextView header = (TextView)findViewById(R.id.secondPageHeader);
+        String msg = p.getName() + " -- " + p.getPhone() + " -- " + p.getHeight() + "cm";
+        Log.d(MainActivity.LOG_TAG, "Received person = " + msg);
+        TextView header = (TextView)findViewById(R.id.tvInfo);
 
-        header.setText(p.getName() + " -- " + p.getPhone() + " -- " + p.getHeight() + "cm");
+        header.setText(msg);
     }
 
     @Override protected void onPause()
     {   super.onPause();
         Log.d(MainActivity.LOG_TAG, "Second Activity paused");
-
     }
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -8,7 +9,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Hello"
-        android:id="@+id/header" android:clickable="true"/>
+        android:id="@+id/header"/>
 
     <EditText android:text=""
               android:id="@+id/EditText01"
@@ -22,19 +23,22 @@
         android:layout_height="wrap_content"
         android:weightSum="2">
 
-        <Button
-            android:id="@+id/btnOK"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="OK" android:padding="3px"/>
+
 
         <Button
             android:id="@+id/btnNext"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Next" android:padding="3px"/>
+            android:text="Next" />
+
+        <Button
+            android:id="@+id/btnOK"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="OK"/>
+
     </LinearLayout>
 
 </LinearLayout>
